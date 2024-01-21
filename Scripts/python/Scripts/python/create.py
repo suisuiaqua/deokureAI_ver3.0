@@ -2,6 +2,8 @@ import pandas as pd;
 
 def create_shipping_time(df):
     result = []
+    print('実行されました')
+    print('テスト')
     for co, kai in zip(df['調教コース'], df['開催']):
         if (co == '栗東'):
             if (kai == '京都'):

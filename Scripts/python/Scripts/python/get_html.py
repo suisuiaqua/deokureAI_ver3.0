@@ -24,8 +24,8 @@ def get_html_df(id):
     driver.get(target_url)
     sleep(1)
 
-    USERNAME = "iijima.suisuiaqua1101@gmail.com"
-    PASSWORD = "sakadonishi15"
+    USERNAME = ""
+    PASSWORD = ""
 
     username_input = driver.find_elements(By.XPATH,'//*[@id="contents"]/div/form/div/ul/li[1]/input')
     sleep(1)
