@@ -158,7 +158,7 @@ def all_preprocessing(df, result, main):
     df = df.rename({'本馬場':'situation', '天気': 'whether', '形態' : 'track'}, axis=1)
     df['rightORleft'] = df['rightORleft'].apply(lambda x : '右' if '右' in x else '左')
 
-    for x in glob.glob('D:/03_keiba/Scripts/python/label_encoder/*'):
+    for x in glob.glob('/label_encoder/*'):
         file_name = os.path.splitext(os.path.basename(x))[0]
         if file_name in df.columns:
             encoder = joblib.load(x)
@@ -173,7 +173,7 @@ def all_preprocessing(df, result, main):
     else:
         df['horse_deokure_avg'] = 0
 
-    j_df = joblib.load('D:/03_keiba/Scripts/pkl/jockey_avg.pickle')
+    j_df = joblib.load('/jockey_avg.pickle')
     def get_jockey_avg(j_id):
         if len(j_id) == 4:
             j_id = '0' + j_id
