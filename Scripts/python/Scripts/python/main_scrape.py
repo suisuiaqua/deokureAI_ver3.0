@@ -17,7 +17,7 @@ def mainScrape(df):
     options.add_argument('--proxy-server="direct://"') 
     options.add_argument('--proxy-bypass-list=*')      
     options.add_argument('--start-maximized')  
-    service = Service(executable_path="D:/chromedriver_win32/chromedriver.exe")
+    service = Service(executable_path="")
     driver = webdriver.Chrome(service=service, options=options)
     horse_id_list = df['horse_id']
     target_url = "https://regist.netkeiba.com/account/?pid=login"

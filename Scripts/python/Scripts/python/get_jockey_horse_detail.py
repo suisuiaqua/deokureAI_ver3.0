@@ -19,7 +19,7 @@ def raceScrape_jockeyID_horseID(id):
     options.add_argument('--proxy-server="direct://"') 
     options.add_argument('--proxy-bypass-list=*')      
     options.add_argument('--start-maximized')  
-    service = Service(executable_path="D:/chromedriver_win32/chromedriver.exe")
+    service = Service(executable_path="")
     driver = webdriver.Chrome(service=service, options=options)
     url = f'https://race.netkeiba.com/race/shutuba.html?race_id={id}'
     df = pd.read_html(url, encoding='EUC-JP')[0]
